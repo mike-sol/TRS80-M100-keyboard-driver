@@ -1,0 +1,13 @@
+[Unit]
+Description=Run M100Keyboard script at boot
+After=default.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/M100Keyboard.py
+TimeoutStartSec=0
+Restart=on-failure
+RestartSec=1s
+
+[Install]
+WantedBy=default.target
